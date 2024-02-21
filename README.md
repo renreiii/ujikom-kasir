@@ -29,7 +29,7 @@
 
 ### D. Modelling
 
-- Database menggunakan ORM Eloquent Laravel.
+- Model data dibuat menggunakan ORM Eloquent Laravel.
 - Menggunakan DBMS MySQL dengan MySQL Workbench dan phpMyAdmin.
 
 -------------------------
