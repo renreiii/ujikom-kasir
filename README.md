@@ -1,92 +1,143 @@
-# Aplikasi Point of Sales
+### A. Pendahuluan
 
-##  Apps Folder
-* app - Contains all the Eloquent models
-* app/Http/Middleware - Contains the auth, authorize, access level config
-* config - Contains all the application configuration files
-* database/factories - Contains the model factory for all the models
-* database/migrations - Contains all the database migrations
-* database/seeds - Contains the database seeder
-* routes - Contains routes for the application
-* app/Http/Controllers - Contains all app controllers
-* resources/view - Contains all the view ui configuration
-##  Features
-* Login
-* Dashboard
-* Kategori Produk
-* Produk
-* Member
-* Supplier
-* Pembelian Produk
-* Pengeluaran (will be removed soon)
-* Transaksi
-* Laporan
-* Pengaturan Profil Pengguna
-* Pengaturan Profil Toko
+- Judul projek: "Aplikasi Point of Sales menggunakan Framework Laravel"
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+-------------------------
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### B. Persiapan
 
-## About Laravel
+- Software dan teknologi yang digunakan:
+  - Framework Laravel 8
+  - Visual Studio Code
+  - XAMPP (PHP 7.4.33)
+  - Bootstrap 3
+  - Git dan GitHub
+  - Brave browser
+  - Composer 2
+  - AJAX
+  - Chart.JS
+  - Milon Barcode
+- Hardware: Laptop Lenovo G4080 dengan OS Windows 10 Pro.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-------------------------
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### C. K3LH (Keselamatan, Kesehatan Kerja dan Lingkungan Hidup)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Prosedur keselamatan dalam lingkungan pekerjaan, termasuk posisi duduk, posisi tubuh, keamanan perangkat keras, dan perlindungan data.
 
-## Learning Laravel
+-------------------------
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### D. Modelling
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Database menggunakan ORM Eloquent Laravel.
+- Menggunakan DBMS MySQL dengan MySQL Workbench dan phpMyAdmin.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-------------------------
 
-## Laravel Sponsors
+### E. MOCKUP
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Menggunakan Template Admin LTE v2.
+- Bootstrap 3.
 
-### Premium Partners
+-------------------------
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### F. Coding
 
-## Contributing
+#### Apps Folder
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- Struktur folder aplikasi Laravel.
++ app - Contains all the Eloquent models
++ app/Http/Middleware - Contains the auth, authorize, access level config
++ config - Contains all the application configuration files
++ database/factories - Contains the model factory for all the models
++ database/migrations - Contains all the database migrations
++ database/seeds - Contains the database seeder
++ routes - Contains routes for the application
++ app/Http/Controllers - Contains all app controllers
++ resources/view - Contains all the view ui configuration
 
-## Code of Conduct
+#### Features
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **Login:**
+  - Super Admin
+  - Kasir
+  - Menggunakan 1 halaman login
+  - Remember me menggunakan cookie
 
-## Security Vulnerabilities
+- **Dashboard:**
+  - Box dashboard menggunakan Bootstrap
+  - Grafik penjualan menggunakan Chart.JS
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- **Kategori Produk:**
+  - CRUD Kategori Produk
+  - Berfungsi sebagai kategori dalam menu Produk.
 
-## License
+- **Produk:**
+  - CRUD Produk
+  - List produk yang dijual dalam transaksi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **Member:**
+  - CRUD Member
+  - Diskon konstan yang dikonfigurasi dalam setting sistem kasir
+  - Cetak kartu member
+
+- **Supplier:**
+  - Menyediakan stok produk
+  - Alur antara produk dengan supplier diperbaiki
+
+- **Pembelian Produk:**
+  - Pembelian melalui supplier
+  - Relational CRUD ke daftar produk dalam sistem
+
+- **Penjualan:**
+  - Record penjualan yang bertambah sesuai jumlah transaksi
+
+- **Transaksi:**
+  - Fitur transaksi antara kasir dan pembeli
+  - UI untuk menambahkan produk
+  - Ada transaksi aktif (tersimpan melalui session) dan transaksi baru
+
+- **Laporan:**
+  - Laporan penjualan yang dikonversi menjadi PDF
+
+- **Pengaturan Profil Pengguna:**
+  - Mengatur profil pengguna di semua level pengguna
+
+- **Pengaturan Profil Toko:**
+  - Mengatur identitas toko
+
+- **Manage User (Super Admin):**
+  - Memanage user yang ada dalam sistem, yaitu kasir
+
+-------------------------
+
+### G.Instalasi
+
+install dependencies
+`composer install`
+
+generate app key
+`php artisan key:generate`
+
+generate .env dari .env.example
+`cp .env.example .env`
+
+konfigurasi .env sesuai dengan database anda
+
+jalankan migrate dan seeding
+`php artisan migrate --seed`
+
+jalankan aplikasi dengan command
+`php artisan serve`
+
+buka aplikasi di browser melalui localhost
+`localhost`
+
+-------------------------
+
+### EXTRA:
+
+- Mini sidebar
+- Pagination
+
+-------------------------
