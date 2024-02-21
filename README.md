@@ -1,3 +1,29 @@
+# Aplikasi Point of Sales
+
+##  Apps Folder
+* app - Contains all the Eloquent models
+* app/Http/Middleware - Contains the auth, authorize, access level config
+* config - Contains all the application configuration files
+* database/factories - Contains the model factory for all the models
+* database/migrations - Contains all the database migrations
+* database/seeds - Contains the database seeder
+* routes - Contains routes for the application
+* app/Http/Controllers - Contains all app controllers
+* resources/view - Contains all the view ui configuration
+##  Features
+* Login
+* Dashboard
+* Kategori Produk
+* Produk
+* Member
+* Supplier
+* Pembelian Produk
+* Pengeluaran (will be removed soon)
+* Transaksi
+* Laporan
+* Pengaturan Profil Pengguna
+* Pengaturan Profil Toko
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
