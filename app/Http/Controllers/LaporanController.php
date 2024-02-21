@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pembelian;
-use App\Models\Pengeluaran;
 use App\Models\Penjualan;
 use Illuminate\Http\Request;
 use PDF;
@@ -36,9 +35,8 @@ class LaporanController extends Controller
 
             $total_penjualan = Penjualan::where('created_at', 'LIKE', "%$tanggal%")->sum('bayar');
             $total_pembelian = Pembelian::where('created_at', 'LIKE', "%$tanggal%")->sum('bayar');
-            $total_pengeluaran = Pengeluaran::where('created_at', 'LIKE', "%$tanggal%")->sum('nominal');
 
-            $pendapatan = $total_penjualan - $total_pembelian - $total_pengeluaran;
+            $pendapatan = $total_penjualan - $total_pembelian;
             $total_pendapatan += $pendapatan;
 
             $row = array();
@@ -46,7 +44,6 @@ class LaporanController extends Controller
             $row['tanggal'] = tanggal_indonesia($tanggal, false);
             $row['penjualan'] = format_uang($total_penjualan);
             $row['pembelian'] = format_uang($total_pembelian);
-            $row['pengeluaran'] = format_uang($total_pengeluaran);
             $row['pendapatan'] = format_uang($pendapatan);
 
             $data[] = $row;
@@ -57,7 +54,6 @@ class LaporanController extends Controller
             'tanggal' => '',
             'penjualan' => '',
             'pembelian' => '',
-            'pengeluaran' => 'Total Pendapatan',
             'pendapatan' => format_uang($total_pendapatan),
         ];
 
