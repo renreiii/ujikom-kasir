@@ -4,7 +4,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         @php
             $words = explode(' ', $setting->nama_perusahaan);
-            $word  = '';
+            $word = '';
             foreach ($words as $w) {
                 $word .= $w[0];
             }
@@ -25,8 +25,7 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="{{ url(auth()->user()->foto ?? '') }}" class="user-image img-profil"
-                            alt="User Image">
+                        <img src="{{ url(auth()->user()->foto ?? '') }}" class="user-image img-profil" alt="User Image">
                         <span class="hidden-xs">{{ auth()->user()->name }}</span>
                     </a>
                     <ul class="dropdown-menu">
@@ -41,11 +40,14 @@
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
-                            <div class="pull-left">
-                                <a href="{{ route('user.profil') }}" class="btn btn-default btn-flat">Profil</a>
-                            </div>
-                            <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat"
+                            @if (auth()->user()->level != 2)
+                                <!-- Hanya admin yang memiliki akses ke profil -->
+                                <div class="pull-left">
+                                    <a href="{{ route('user.profil') }}" class="btn btn-default btn-flat">Profil</a>
+                                </div>
+                            @endif
+                            <div class="text-center mx-auto">
+                                <a href="#" class="btn btn-default btn-flat btn-block"
                                     onclick="$('#logout-form').submit()">Keluar</a>
                             </div>
                         </li>
