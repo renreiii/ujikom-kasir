@@ -101,6 +101,115 @@
                 </div>
             </div>
             <!-- /.box -->
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Riwayat Transaksi Terbaru</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="box-body table-responsive">
+                            <table class="table table-stiped table-bordered table-penjualan">
+                                <thead>
+                                    <th width="5%">No</th>
+                                    <th>Tanggal</th>
+                                    <th>Kode Member</th>
+                                    <th>Total Item</th>
+                                    <th>Total Harga</th>
+                                    <th>Diskon</th>
+                                    <th>Total Bayar</th>
+                                    <th>Kasir</th>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @includeIf('penjualan.detail')
+
+            @push('scripts')
+                <script>
+                    let table, table1;
+
+                    $(function() {
+                        table = $('.table-penjualan').DataTable({
+                            responsive: true,
+                            processing: true,
+                            serverSide: true,
+                            autoWidth: false,
+                            ajax: {
+                                url: '{{ route('penjualan.data') }}',
+                            },
+                            columns: [{
+                                    data: 'DT_RowIndex',
+                                    sortable: false
+                                },
+                                {
+                                    data: 'tanggal',
+                                    sortable: false
+                                },
+                                {
+                                    data: 'kode_member',
+                                    sortable: false
+                                },
+                                {
+                                    data: 'total_item',
+                                    sortable: false
+                                },
+                                {
+                                    data: 'total_harga',
+                                    sortable: false
+                                },
+                                {
+                                    data: 'diskon',
+                                    sortable: false
+                                },
+                                {
+                                    data: 'bayar',
+                                    sortable: false
+                                },
+                                {
+                                    data: 'kasir',
+                                    sortable: false
+                                },
+                            ],
+                            dom: '',
+
+                        });
+
+                        table.page.len(5).draw(); // limit only shows 5 records
+
+                        table1 = $('.table-detail').DataTable({
+                            processing: true,
+                            bSort: false,
+                            dom: 'Brt',
+                            columns: [{
+                                    data: 'DT_RowIndex',
+                                    searchable: false,
+                                    sortable: false
+                                },
+                                {
+                                    data: 'kode_produk'
+                                },
+                                {
+                                    data: 'nama_produk'
+                                },
+                                {
+                                    data: 'harga_jual'
+                                },
+                                {
+                                    data: 'jumlah'
+                                },
+                                {
+                                    data: 'subtotal'
+                                },
+                            ]
+                        })
+                    });
+                </script>
+            @endpush
+
+            <!-- /.box -->
         </div>
         <!-- /.col -->
     </div>

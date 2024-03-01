@@ -46,10 +46,17 @@
                                     <a href="{{ route('user.profil') }}" class="btn btn-default btn-flat">Profil</a>
                                 </div>
                             @endif
-                            <div class="text-center mx-auto">
-                                <a href="#" class="btn btn-default btn-flat btn-block"
-                                    onclick="$('#logout-form').submit()">Keluar</a>
-                            </div>
+                            @if (auth()->user()->level == 1)
+                                <div class="pull-right mx-auto">
+                                    <a href="#" class="btn btn-default btn-flat"
+                                        onclick="$('#logout-form').submit()">Keluar</a>
+                                </div>
+                            @else
+                                <div class="text-center mx-auto">
+                                    <a href="#" class="btn btn-default btn-flat btn-block"
+                                        onclick="$('#logout-form').submit()">Keluar</a>
+                                </div>
+                            @endif
                         </li>
                     </ul>
                 </li>

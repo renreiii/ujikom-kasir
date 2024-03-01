@@ -52,7 +52,7 @@
                 </li>
                 <li class="{{ request()->routeIs('penjualan.*') ? 'active' : '' }}">
                     <a href="{{ route('penjualan.index') }}">
-                        <i class="fa fa-upload"></i> <span>Penjualan</span>
+                        <i class="fa fa-upload"></i> <span>Riwayat Transaksi</span>
                     </a>
                 </li>
                 <li class="{{ request()->routeIs('transaksi.*') ? 'active' : '' }}">
