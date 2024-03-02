@@ -116,11 +116,11 @@
 install dependencies <br>
 `composer install`
 
-generate app key <br>
-`php artisan key:generate`
-
 generate .env dari .env.example <br>
 `cp .env.example .env`
+
+generate app key <br>
+`php artisan key:generate`
 
 konfigurasi .env sesuai dengan database anda <br>
 
