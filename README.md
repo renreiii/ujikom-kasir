@@ -137,7 +137,12 @@ buka aplikasi di browser melalui localhost <br>
 
 ### EXTRA:
 
-- Mini sidebar
-- Pagination
+## Account for admin:
+Email: admin@gmail.com
+Pass: 123456
+
+## Account for user:
+Email: rynynr@gmail.com
+Pass: 123456
 
 -------------------------
