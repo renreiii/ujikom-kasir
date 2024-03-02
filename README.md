@@ -138,11 +138,11 @@ buka aplikasi di browser melalui localhost <br>
 ### EXTRA:
 
 ## Account for admin:
-Email: admin@gmail.com
+Email: admin@gmail.com <br>
 Pass: 123456
 
 ## Account for user:
-Email: rynynr@gmail.com
+Email: rynynr@gmail.com <br>
 Pass: 123456
 
 -------------------------
