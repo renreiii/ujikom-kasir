@@ -113,24 +113,24 @@
 
 ### G.Instalasi
 
-install dependencies
+install dependencies <br><br>
 `composer install`
 
-generate app key
+generate app key <br><br>
 `php artisan key:generate`
 
-generate .env dari .env.example
+generate .env dari .env.example <br><br>
 `cp .env.example .env`
 
-konfigurasi .env sesuai dengan database anda
+konfigurasi .env sesuai dengan database anda <br><br>
 
-jalankan migrate dan seeding
+jalankan migrate dan seeding <br><br>
 `php artisan migrate --seed`
 
-jalankan aplikasi dengan command
+jalankan aplikasi dengan command <br><br>
 `php artisan serve`
 
-buka aplikasi di browser melalui localhost
+buka aplikasi di browser melalui localhost <br><br>
 `localhost`
 
 -------------------------
