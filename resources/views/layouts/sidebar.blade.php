@@ -47,7 +47,7 @@
 
                 <li class="{{ request()->routeIs('pembelian.*') ? 'active' : '' }}">
                     <a href="{{ route('pembelian.index') }}">
-                        <i class="fa fa-download"></i> <span>Pembelian</span>
+                        <i class="fa fa-download"></i> <span>Pembelian Stok</span>
                     </a>
                 </li>
                 <li class="{{ request()->routeIs('penjualan.*') ? 'active' : '' }}">
