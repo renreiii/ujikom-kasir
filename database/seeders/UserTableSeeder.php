@@ -24,7 +24,7 @@ class UserTableSeeder extends Seeder
             ],
             [
                 'name' => 'Ryan Yanuar Pradana',
-                'email' => 'rynynr@gmail.com',
+                'email' => 'kasir1@gmail.com',
                 'password' => bcrypt('123456'),
                 'foto' => '/img/pp-emot.jpg',
                 'level' => 2
