@@ -84,6 +84,11 @@
                     </a>
                 </li>
             @else
+                <li class="{{ request()->routeIs('member.*') ? 'active' : '' }}">
+                    <a href="{{ route('member.index') }}">
+                        <i class="fa fa-id-card"></i> <span>Member</span>
+                    </a>
+                </li>
                 <li class="{{ request()->routeIs('transaksi.*') ? 'active' : '' }}">
                     <a href="{{ route('transaksi.index') }}">
                         <i class="fa fa-cart-arrow-down"></i> <span>Transaksi Aktif</span>
