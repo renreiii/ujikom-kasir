@@ -88,7 +88,7 @@
 
 -------------------------
 
-### F.Instalasi
+### F. Instalasi
 
 install dependencies <br>
 `composer install`
