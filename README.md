@@ -10,6 +10,7 @@
   - Framework Laravel 8
   - Visual Studio Code
   - Laragon (PHP 7.4.33, 8.1.10)
+  - DBMS MySQL 8.0.30
   - Bootstrap
   - Git dan GitHub
   - Brave browser
