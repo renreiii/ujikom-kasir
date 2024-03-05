@@ -22,7 +22,8 @@
                             <th>Total Item</th>
                             <th>Total Harga</th>
                             <th>Diskon</th>
-                            <th>Total Bayar</th>
+                            <th>Subtotal</th>
+                            <th>Diterima</th>
                             <th>Kasir</th>
                             <th width="15%"><i class="fa fa-cog"></i></th>
                         </thead>
@@ -40,75 +41,78 @@
         let table, table1;
 
         $(function() {
-                    table = $('.table-penjualan').DataTable({
-                        responsive: true,
-                        processing: true,
-                        serverSide: true,
-                        autoWidth: false,
-                        ajax: {
-                            url: '{{ route('penjualan.data') }}',
-                        },
-                            columns: [{
-                                    data: 'DT_RowIndex',
-                                    searchable: false,
-                                    sortable: false
-                                },
-                                {
-                                    data: 'tanggal'
-                                },
-                                {
-                                    data: 'kode_member'
-                                },
-                                {
-                                    data: 'total_item'
-                                },
-                                {
-                                    data: 'total_harga'
-                                },
-                                {
-                                    data: 'diskon'
-                                },
-                                {
-                                    data: 'bayar'
-                                },
-                                {
-                                    data: 'kasir'
-                                },
-                                {
-                                    data: 'aksi',
-                                    searchable: false,
-                                    sortable: false
-                                },
-                            ]
-                        });
+            table = $('.table-penjualan').DataTable({
+                responsive: true,
+                processing: true,
+                serverSide: true,
+                autoWidth: false,
+                ajax: {
+                    url: '{{ route('penjualan.data') }}',
+                },
+                columns: [{
+                        data: 'DT_RowIndex',
+                        searchable: false,
+                        sortable: false
+                    },
+                    {
+                        data: 'tanggal'
+                    },
+                    {
+                        data: 'kode_member'
+                    },
+                    {
+                        data: 'total_item'
+                    },
+                    {
+                        data: 'total_harga'
+                    },
+                    {
+                        data: 'diskon'
+                    },
+                    {
+                        data: 'bayar'
+                    },
+                    {
+                        data: 'diterima'
+                    },
+                    {
+                        data: 'kasir'
+                    },
+                    {
+                        data: 'aksi',
+                        searchable: false,
+                        sortable: false
+                    },
+                ]
+            });
 
-                        table1 = $('.table-detail').DataTable({
-                            processing: true,
-                            bSort: false,
-                            dom: 'Brt',
-                            columns: [{
-                                    data: 'DT_RowIndex',
-                                    searchable: false,
-                                    sortable: false
-                                },
-                                {
-                                    data: 'kode_produk'
-                                },
-                                {
-                                    data: 'nama_produk'
-                                },
-                                {
-                                    data: 'harga_jual'
-                                },
-                                {
-                                    data: 'jumlah'
-                                },
-                                {
-                                    data: 'subtotal'
-                                },
-                            ]
-                        })
-                    });
+            table1 = $('.table-detail').DataTable({
+                processing: true,
+                bSort: false,
+                dom: 'Brt',
+                columns: [{
+                        data: 'DT_RowIndex',
+                        searchable: false,
+                        sortable: false
+                    },
+                    {
+                        data: 'kode_produk'
+                    },
+                    {
+                        data: 'nama_produk'
+                    },
+                    {
+                        data: 'harga_jual'
+                    },
+                    {
+                        data: 'jumlah'
+                    },
+                    {
+                        data: 'subtotal'
+                    },
+                ]
+            })
+        });
 
         function showDetail(url) {
             $('#modal-detail').modal('show');
