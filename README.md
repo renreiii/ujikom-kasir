@@ -110,11 +110,11 @@ jalankan aplikasi dengan command <br>
 
 ### LOGIN INFORMATION:
 
-## Account for admin:
+# Account for admin:
 Email: admin@gmail.com <br>
 Pass: 123456
 
-## Account for user:
+# Account for user:
 Email: kasir1@gmail.com <br>
 Pass: 123456
 
