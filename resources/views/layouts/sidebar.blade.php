@@ -84,6 +84,11 @@
                     </a>
                 </li>
             @else
+                <li class="{{ request()->routeIs('produk.*') ? 'active' : '' }}">
+                    <a href="{{ route('produk.index') }}">
+                        <i class="fa fa-cubes"></i> <span>Produk</span>
+                    </a>
+                </li>
                 <li class="{{ request()->routeIs('member.*') ? 'active' : '' }}">
                     <a href="{{ route('member.index') }}">
                         <i class="fa fa-id-card"></i> <span>Member</span>
