@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +21,8 @@
        folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('/AdminLTE-2/dist/css/skins/_all-skins.min.css') }}">
     <!-- DataTables -->
-    <link rel="stylesheet" href="{{ asset('/AdminLTE-2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('/AdminLTE-2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +37,8 @@
 
     @stack('css')
 </head>
-<body class="hold-transition skin-purple-light sidebar-mini">
+
+<body class="hold-transition skin-blue-light sidebar-mini">
     <div class="wrapper">
 
         @includeIf('layouts.header')
@@ -58,7 +61,7 @@
 
             <!-- Main content -->
             <section class="content">
-                
+
                 @yield('content')
 
             </section>
@@ -86,11 +89,12 @@
     <script src="{{ asset('js/validator.min.js') }}"></script>
 
     <script>
-        function preview(selector, temporaryFile, width = 200)  {
+        function preview(selector, temporaryFile, width = 200) {
             $(selector).empty();
             $(selector).append(`<img src="${window.URL.createObjectURL(temporaryFile)}" width="${width}">`);
         }
     </script>
     @stack('scripts')
 </body>
+
 </html>
