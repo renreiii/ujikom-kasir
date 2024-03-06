@@ -36,7 +36,7 @@ class LaporanController extends Controller
             $total_penjualan = Penjualan::where('created_at', 'LIKE', "%$tanggal%")->sum('bayar');
             $total_pembelian = Pembelian::where('created_at', 'LIKE', "%$tanggal%")->sum('bayar');
 
-            $pendapatan = $total_penjualan - $total_pembelian;
+            $pendapatan = $total_penjualan;
             $total_pendapatan += $pendapatan;
 
             $row = array();
@@ -53,7 +53,7 @@ class LaporanController extends Controller
             'DT_RowIndex' => '',
             'tanggal' => '',
             'penjualan' => '',
-            'pembelian' => '',
+            'pembelian' => 'Total Pendapatan: ',
             'pendapatan' => format_uang($total_pendapatan),
         ];
 
@@ -74,7 +74,7 @@ class LaporanController extends Controller
         $data = $this->getData($awal, $akhir);
         $pdf  = PDF::loadView('laporan.pdf', compact('awal', 'akhir', 'data'));
         $pdf->setPaper('a4', 'potrait');
-        
-        return $pdf->stream('Laporan-pendapatan-'. date('Y-m-d-his') .'.pdf');
+
+        return $pdf->stream('Laporan-pendapatan-' . date('Y-m-d-his') . '.pdf');
     }
 }
