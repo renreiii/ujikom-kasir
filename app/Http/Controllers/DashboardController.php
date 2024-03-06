@@ -31,7 +31,7 @@ class DashboardController extends Controller
             $total_penjualan = Penjualan::where('created_at', 'LIKE', "%$tanggal_awal%")->sum('bayar');
             $total_pembelian = Pembelian::where('created_at', 'LIKE', "%$tanggal_awal%")->sum('bayar');
 
-            $pendapatan = $total_penjualan - $total_pembelian;
+            $pendapatan = $total_penjualan;
             $data_pendapatan[] += $pendapatan;
 
             $tanggal_awal = date('Y-m-d', strtotime("+1 day", strtotime($tanggal_awal)));
