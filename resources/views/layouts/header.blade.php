@@ -40,23 +40,13 @@
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
-                            @if (auth()->user()->level != 2)
-                                <!-- Hanya admin yang memiliki akses ke profil -->
-                                <div class="pull-left">
-                                    <a href="{{ route('user.profil') }}" class="btn btn-default btn-flat">Profil</a>
-                                </div>
-                            @endif
-                            @if (auth()->user()->level == 1)
-                                <div class="pull-right mx-auto">
-                                    <a href="#" class="btn btn-default btn-flat"
-                                        onclick="$('#logout-form').submit()">Keluar</a>
-                                </div>
-                            @else
-                                <div class="text-center mx-auto">
-                                    <a href="#" class="btn btn-default btn-flat btn-block"
-                                        onclick="$('#logout-form').submit()">Keluar</a>
-                                </div>
-                            @endif
+                            <div class="pull-left">
+                                <a href="{{ route('user.profil') }}" class="btn btn-default btn-flat">Profil</a>
+                            </div>
+                            <div class="pull-right text-center mx-auto">
+                                <a href="#" class="btn btn-default btn-flat btn-block"
+                                    onclick="$('#logout-form').submit()">Keluar</a>
+                            </div>
                         </li>
                     </ul>
                 </li>
