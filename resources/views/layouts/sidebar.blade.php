@@ -84,6 +84,7 @@
                     </a>
                 </li>
             @else
+                <li class="header">MASTER</li>
                 <li class="{{ request()->routeIs('produk.*') ? 'active' : '' }}">
                     <a href="{{ route('produk.index') }}">
                         <i class="fa fa-cubes"></i> <span>Produk</span>
@@ -94,6 +95,7 @@
                         <i class="fa fa-id-card"></i> <span>Member</span>
                     </a>
                 </li>
+                <li class="header">TRANSAKSI</li>
                 <li class="{{ request()->routeIs('transaksi.*') ? 'active' : '' }}">
                     <a href="{{ route('transaksi.index') }}">
                         <i class="fa fa-cart-arrow-down"></i> <span>Transaksi Aktif</span>
@@ -102,6 +104,11 @@
                 <li class="{{ request()->routeIs('transaksi.baru') ? 'active' : '' }}">
                     <a href="{{ route('transaksi.baru') }}">
                         <i class="fa fa-cart-arrow-down"></i> <span>Transaksi Baru</span>
+                    </a>
+                </li>
+                <li class="{{ request()->routeIs('penjualan.*') ? 'active' : '' }}">
+                    <a href="{{ route('penjualan.index') }}">
+                        <i class="fa fa-upload"></i> <span>Riwayat Transaksi</span>
                     </a>
                 </li>
             @endif
