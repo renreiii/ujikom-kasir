@@ -27,6 +27,10 @@
                     <div class="box-body table-responsive">
                         <form action="" method="post" class="form-produk">
                             @csrf
+                            <label for="filter-kategori">Filter Kategori:</label>
+                            <select id="filter-kategori" class=" form-control margin-bottom" style="width: 15rem;">
+                                <option value=""></option>
+                            </select>
                             <table class="table table-stiped table-bordered">
                                 <thead>
                                     <th width="5%">
@@ -102,6 +106,21 @@
     <script>
         let table;
         $(function() {
+            $.ajax({
+                url: '{{ route('kategori.data') }}',
+                type: 'GET',
+                success: function(response) {
+                    var select = $('#filter-kategori');
+                    select.empty();
+                    select.append('<option value="">All</option>');
+
+                    // Iterate through the response data and add options to the dropdown
+                    $.each(response.data, function(index, category) {
+                        select.append('<option value="' + category.nama_kategori + '">' + category.nama_kategori + '</option>');
+                    });
+                }
+            });
+
             table = $('.table').DataTable({
                 responsive: true,
                 processing: true,
@@ -152,6 +171,11 @@
                         },
                     @endif
                 ],
+            });
+
+            $('#filter-kategori').on('change', function() {
+                var selectedCategory = $(this).val();
+                table.column(4).search(selectedCategory).draw(); // Assuming "Kategori" is the 5th column (index 4)
             });
 
             $('#modal-form').validator().on('submit', function(e) {
