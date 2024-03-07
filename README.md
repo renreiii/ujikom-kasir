@@ -19,6 +19,7 @@
   - Chart.JS
   - Milon Barcode
   - Datatables
+  - Dompdf
 -------------------------
 
 ### C. Modelling/Database
